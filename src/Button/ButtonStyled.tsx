@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 const ButtonStyled = styled.button`
-  color: #1e1e1e;
-  background-color: #cccf18;
-  font-family: "Saira Stencil One", sans-serif;
+  color: var(--primaryColor);
+  background-color: var(--accentColor);
+  font-family: var(--secondaryFont);
   font-size: 1.25rem;
-  padding: 5px 123px;
-  border: none;
+  height: 40px;
+  width: 323px;
   border-radius: 10px;
-  cursor: pointer;
 
   :disabled {
     opacity: 0.57;
   }
 
   @media screen and (min-width: 987px) {
-    padding: 13px 120px;
+    height: 57px;
+    width: 327px;
   }
 `;
 
