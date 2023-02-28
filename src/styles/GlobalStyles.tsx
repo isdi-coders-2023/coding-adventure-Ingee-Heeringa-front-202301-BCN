@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 20px;
     font-family: ${(props) => props.theme.fonts.primary};
+    background-color: ${(props) => props.theme.colors.primary};
+    color: #fff;
   }
 
   ul, ol, li {
@@ -19,10 +21,10 @@ const GlobalStyles = createGlobalStyle`
   button, input {
     font-family: inherit;
     font-size: inherit;
+    border: none
   }
 
   button {
-    border: none;
     cursor: pointer;
   }
 
