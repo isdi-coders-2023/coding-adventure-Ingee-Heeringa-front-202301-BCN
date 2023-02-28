@@ -8,6 +8,7 @@ const ButtonStyled = styled.button`
   height: 40px;
   width: 323px;
   border-radius: 10px;
+  align-self: center;
 
   :disabled {
     opacity: 0.57;

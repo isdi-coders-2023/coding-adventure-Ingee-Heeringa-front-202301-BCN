@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 20px;
     font-family: ${(props) => props.theme.fonts.primary};
     background-color: ${(props) => props.theme.colors.primary};
-    color: #fff;
+    color: ${(props) => props.theme.colors.secondary};
   }
 
   ul, ol, li {
