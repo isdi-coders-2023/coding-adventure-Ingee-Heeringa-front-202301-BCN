@@ -1,14 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { CustomTheme } from "../types";
 
-const GlobalStyles = createGlobalStyle`
-  :root {
-    --primaryColor: #1E1E1E;
-    --accentColor: #CCCF18;
-
-    --primaryFont: "Roboto", sans-serif;
-    --secondaryFont: "Saira Stencil One", sans-serif;
-  }
-
+const GlobalStyles = createGlobalStyle<{ theme: CustomTheme }>`
   *, *::before, *:after {
     box-sizing: border-box;
   }
@@ -16,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: var(--primaryFont);
+    font-family: ${(props) => props.theme.fonts.primary};
   }
 
   ul, ol, li {
