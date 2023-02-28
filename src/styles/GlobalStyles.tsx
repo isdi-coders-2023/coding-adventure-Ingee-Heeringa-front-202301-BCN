@@ -1,22 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  :root {
-    --primaryColor: #1E1E1E;
-    --accentColor: #CCCF18;
-
-    --primaryFont: "Roboto", sans-serif;
-    --secondaryFont: "Saira Stencil One", sans-serif;
-  }
-
-  *, *::before, *:after {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
   body {
     margin: 0;
-    padding: 0;
-    font-family: var(--primaryFont);
+    padding: 20px;
+    font-family: ${(props) => props.theme.fonts.primary};
   }
 
   ul, ol, li {
