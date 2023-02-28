@@ -8,26 +8,33 @@ const Form = (): JSX.Element => {
 
   return (
     <FormStyled className="form">
-      <label htmlFor="email">
+      <label htmlFor="email" className="form__label">
         Email
         <input
-          type="text"
+          type="email"
           id="email"
           placeholder="Introduce your email"
           autoComplete="off"
+          className="form__input"
         />
       </label>
-      <label htmlFor="password">
+      <label htmlFor="password" className="form__label">
         Password
         <input
           type="password"
           id="password"
           placeholder="Introduce your password"
+          className="form__input"
         />
       </label>
-      <label htmlFor="image">
+      <label htmlFor="image" className="form__label">
         Image
-        <input type="file" id="image" accept="image/*" />
+        <input
+          type="file"
+          id="image"
+          accept="image/*"
+          className="form__input--file"
+        />
       </label>
       <Button text={buttonText} type={buttonType} disabled={isDisabled} />
     </FormStyled>
