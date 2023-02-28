@@ -1,21 +1,14 @@
-export interface CustomTheme {
-  colors: {
-    primary: string;
-    accent: string;
-  };
-  fonts: {
-    primary: string;
-    secondary: string;
-  };
-}
+import { DefaultTheme } from "styled-components";
 
-export const theme = {
+const theme: DefaultTheme = {
   colors: {
-    primary: "#1E1E1E",
-    accent: "#CCCF18",
+    primary: "#1e1e1e",
+    accent: "#cccf18",
   },
   fonts: {
     primary: "Roboto",
     secondary: "Saira Stencil One",
   },
 };
+
+export default theme;
