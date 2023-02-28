@@ -1,14 +1,14 @@
 import { createGlobalStyle } from "styled-components";
-import { CustomTheme } from "../types";
+import { CustomTheme } from "./theme";
 
 const GlobalStyles = createGlobalStyle<{ theme: CustomTheme }>`
-  *, *::before, *:after {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
   body {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     font-family: ${(props) => props.theme.fonts.primary};
   }
 
