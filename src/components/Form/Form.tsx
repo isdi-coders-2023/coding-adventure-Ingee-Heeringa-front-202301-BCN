@@ -33,7 +33,7 @@ const Form = (): JSX.Element => {
           type="file"
           id="image"
           accept="image/*"
-          className="form__input--file"
+          className="form__input form__input--file"
         />
       </label>
       <Button text={buttonText} type={buttonType} disabled={isDisabled} />
