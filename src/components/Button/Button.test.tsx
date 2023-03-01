@@ -11,7 +11,7 @@ describe("Given a Button component", () => {
 
       render(
         <ThemeProvider theme={theme}>
-          <Button text={expectedText} type="submit" disabled={false} />
+          <Button text={expectedText} isDisabled={false} />
         </ThemeProvider>
       );
 

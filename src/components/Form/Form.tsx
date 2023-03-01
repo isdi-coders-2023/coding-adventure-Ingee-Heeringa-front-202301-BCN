@@ -1,13 +1,28 @@
+import { useState } from "react";
 import Button from "../Button/Button";
 import FormStyled from "./FormStyled";
+import { RegisterData } from "./types";
 
 const Form = (): JSX.Element => {
+  const [registerData, setRegisterData] = useState({
+    email: "",
+    password: "",
+  } as RegisterData);
+
+  const handleChangeData = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+
+    setRegisterData({
+      ...registerData,
+      [event.target.id]: event.target.value,
+    });
+  };
+
+  const isDisabled = registerData.email === "" || registerData.password === "";
   const buttonText = "Sign up";
-  const buttonType = "submit";
-  const isDisabled = false;
 
   return (
-    <FormStyled className="form">
+    <FormStyled className="form" onSubmit={() => {}}>
       <label htmlFor="email" className="form__label">
         Email
         <input
@@ -16,6 +31,8 @@ const Form = (): JSX.Element => {
           placeholder="Introduce your email"
           autoComplete="off"
           className="form__input"
+          onChange={handleChangeData}
+          value={registerData.email}
         />
       </label>
       <label htmlFor="password" className="form__label">
@@ -25,6 +42,8 @@ const Form = (): JSX.Element => {
           id="password"
           placeholder="Introduce your password"
           className="form__input"
+          onChange={handleChangeData}
+          value={registerData.password}
         />
       </label>
       <label htmlFor="image" className="form__label">
@@ -36,7 +55,7 @@ const Form = (): JSX.Element => {
           className="form__input form__input--file"
         />
       </label>
-      <Button text={buttonText} type={buttonType} disabled={isDisabled} />
+      <Button text={buttonText} isDisabled={isDisabled} />
     </FormStyled>
   );
 };
