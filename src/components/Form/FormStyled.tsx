@@ -12,7 +12,7 @@ const FormStyled = styled.form`
       gap: 9px;
     }
 
-    &__input:not([type="file"]) {
+    &__input {
       padding: 11px;
       border-radius: 8px;
     }
