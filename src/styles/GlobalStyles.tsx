@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   button, input {
     font-family: inherit;
     font-size: inherit;
-    border: none
+    border: none;
   }
 
   button {

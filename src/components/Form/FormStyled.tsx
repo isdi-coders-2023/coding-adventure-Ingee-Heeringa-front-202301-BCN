@@ -15,6 +15,13 @@ const FormStyled = styled.form`
     &__input {
       padding: 11px;
       border-radius: 8px;
+      background-color: #e8e8e8;
+      border: 1px solid ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.primary};
+
+      &::placeholder {
+        color: ${(props) => props.theme.colors.primary};
+      }
     }
   }
 
